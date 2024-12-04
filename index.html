@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Date Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-$END$
+    <h1>Easter Date Calculator</h1>
+    <form action="cgi-bin/easter.py" method="GET">
+        <label for="year">Enter Year:</label>
+        <input type="text" id="year" name="year">
+        <fieldset>
+            <legend>Select Output Format:</legend>
+            <input type="radio" id="numeric" name="format" value="numeric">
+            <label for="numeric">Numerically (dd/mm/yyyy)</label><br>
+            <input type="radio" id="verbose" name="format" value="verbose">
+            <label for="verbose">Verbally (day of named_month year)</label><br>
+            <input type="radio" id="both" name="format" value="both">
+            <label for="both">Both</label>
+        </fieldset>
+        <input type="submit" value="Calculate">
+    </form>
 </body>
 </html>
